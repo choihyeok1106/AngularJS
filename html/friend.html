@@ -1,0 +1,39 @@
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>친구</h1>
+                    <div class="search">
+                        <div class="input-group">
+                            <input type="email" class="form-control search" placeholder="검색할 내용을 입력하세요" data-ng-model="friend.email">
+                            <span class="input-group-btn">
+                                <button class="search btn btn-secondary" type="button" data-ng-click="selectfriend()">검색</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="inBox" data-ng-show="roomon">
+			            <canvas id="myCanvas" width="6400" height="6400"></canvas>
+			        </div>
+                    <table class="table table-striped">
+                        <thead class="listH" style="background-color: brown; color: aliceblue">
+                            <tr>
+                            	<td>번호</td>
+                                <td>이름</td>
+                                <td>E-Mail</td>
+                                <td>추천수</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody class="listB" data-ng-repeat="rows in friend">
+                            <tr>
+                            	<td>{{ $index + 1 }}</td>
+                                <td>{{ rows.name }}</td>
+						        <td>{{ rows.email }}</td>
+						        <td>{{ rows.best }}</td>
+						        <td><button data-ng-click="findroom($index)" class="btn btn-danger">방문하기</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>

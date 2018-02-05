@@ -1,0 +1,320 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:700,800);
+@import url('//cdn.rawgit.com/young-ha/webfont-archive/master/css/Godo.css');
+html,
+body {
+    margin: 0;
+    font-family: 'Godo', sans-serif;
+}
+
+/*************************************************************/
+
+/*******상단********/
+
+.modal {
+    padding-top: 30%;
+}
+
+.navbar {
+    background-color: rgb(64, 64, 64);
+}
+
+
+.navbar-right:nth-child(1) > li > a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+    width: 100px;
+    background-image: url(../img/logo.png)!important;
+    background-repeat: no-repeat;
+}
+
+.container-fluid .navbar-header {
+    float: none!important;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-brand:nth-child(2),
+.navbar-brand:nth-child(3),
+.navbar-brand:nth-child(4) {
+    font-size: 12px;
+    float: right;
+}
+
+
+/*******박스********/
+
+.inBox {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    cursor: move;
+    position: relative;
+}
+
+#myCanvas,
+#myobject {
+    -webkit-transform-origin: 10% 0;
+}
+
+#mysetline,
+#myhover,
+#myobject {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+/*.inBox::-webkit-scrollbar {
+    display: none;
+}*/
+
+/* canvas {
+    -webkit-transform-origin: 10% 0;
+} */
+
+.interface {
+    margin-left: 5px;
+    float: right
+}
+
+.interface button {
+    background-color: #ffffff;
+}
+
+.interface button:hover {
+    background-color: #cbcbcb;
+}
+
+
+/*******컨테이너******/
+
+.mymenu {
+    background-color: #dbd1d3;
+    border-radius: 10px;
+}
+
+.mymenu a {
+    color: #434343;
+}
+
+
+/*******보관함********/
+
+.panel.with-nav-tabs .panel-heading {
+    padding: 5px 5px 0 5px;
+}
+
+.panel.with-nav-tabs .nav-tabs {
+    border-bottom: none;
+}
+
+.panel.with-nav-tabs .nav-justified {
+    margin-bottom: -1px;
+}
+
+.with-nav-tabs.panel-danger .nav-tabs > li > a,
+.with-nav-tabs.panel-danger .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-danger .nav-tabs > li > a:focus {
+    color: #a94442;
+}
+
+.with-nav-tabs.panel-danger .nav-tabs > .open > a,
+.with-nav-tabs.panel-danger .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-danger .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-danger .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-danger .nav-tabs > li > a:focus {
+    color: #a94442;
+    background-color: #ebccd1;
+    border-color: transparent;
+}
+
+.with-nav-tabs.panel-danger .nav-tabs > li.active > a,
+.with-nav-tabs.panel-danger .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-danger .nav-tabs > li.active > a:focus {
+    color: #a94442;
+    background-color: #fff;
+    border-color: #ebccd1;
+    border-bottom-color: transparent;
+}
+
+.tab-content {
+    position: relative;
+}
+
+/*
+.tab-content img {
+    width: calc(100%/10);
+    cursor: pointer;    
+}
+*/
+
+.tab-content img:hover {
+    border: 3px solid #ffffff;
+}
+
+.button {
+    float: right!important;
+}
+
+.draw-inter {
+    clear: both;
+}
+
+.draw-inter button {
+    margin: 10px 0;
+}
+
+#mydraw {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+.canvas canvas {
+    float: left;
+}
+
+select {
+    height: 25px;
+}
+
+
+
+
+
+/*혁추가 footer를위한css*/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.sbody {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 40px;
+    /* footer height */
+}
+
+footer p span {
+    padding: 10px;
+}
+
+footer {
+    background-color: #72aef4;
+    color: #ffffff;
+    height: 40px;
+}
+
+/*친구검색창list*/
+
+.search {
+    margin-bottom: 40px;
+    height: 50px;
+}
+
+/*상점list*/
+
+.portfolio-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.store {
+    border: 1px solid #ddd4d4;
+    width: 100%;
+    border-radius: 4px;
+    float: left;
+}
+
+.navbar-header {
+    height: 100%;
+    height: 50px;
+}
+
+.logout {
+    color: pink;
+}
+
+.cvs {
+    overflow-x: auto;
+    position: relative;
+}
+
+table {
+    text-align: center;
+}
+
+
+/*안주면 이미지 코딱지됨*/
+
+.myitem img {
+    width: 100%;
+}
+
+
+/*닫기버튼*/
+
+.close-path:after {
+    content: '✖';
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    margin-right: 9px;
+    background-color: #c3b0b0;
+    color: #118667;
+    height: 15px;
+    border-radius: 13px;
+}
+
+/*inven 먹히게 고정값변경*/
+
+.inven {
+    width: 1900px;
+}
+
+
+@media only screen and (max-width:992px) {
+    .myitem {
+        width: calc(100% / 6);
+        float: left;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .store .portfolio-item {
+        width: calc(100% / 3);
+        float: left;
+    }
+    .myitem {
+        width: calc(100% / 6);
+        float: left;
+    }
+    .inven {
+        width: 766px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .store .portfolio-item {
+        width: calc(100% / 2);
+        float: left;
+    }
+    .myitem {
+        width: calc(100% / 3);
+        float: left;
+    }
+    .inven {
+        width: 548px;
+    }
+}

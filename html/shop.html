@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+     <div class="panel-body text-center">
+         <h1>상점</h1>
+     </div>
+     <div class="item panel-footer col-md-12 text-center store">
+          <div class="search">
+             <div class="input-group">
+                 <input type="text" class="form-control search" placeholder="Search for..." data-ng-model="shop.char">
+                 <span class="input-group-btn">
+                     <button class="search btn btn-secondary" type="button" data-ng-click="searchshop()">검색</button>
+                 </span>
+             </div>
+         </div>
+         <h4 data-ng-if="shop.length == 0">상품이 없습니다.</h4>
+         <div class="col-md-2 col-sm-2 portfolio-item" data-ng-repeat="rows in shop">
+             <img data-ng-src="{{'resources/item/' +rows.itemno + '.png'}}">
+             <p style="clear:both">{{rows.name}}</p>
+             <p>{{rows.price}}포인트<button class="btn btn-success" data-ng-click="additem($index)">구매</button></p>
+         </div>
+        
+     </div>
+ </div>

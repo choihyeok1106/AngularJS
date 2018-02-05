@@ -1,0 +1,161 @@
+<div class="inBox">
+    <canvas id="myCanvas" width="6400" height="6400"></canvas>
+    <canvas id="myobject" width="6400" height="6400"></canvas>
+    <canvas id="mysetline" width="6400" height="6400"></canvas>
+    <canvas id="myhover" width="6400" height="6400"></canvas>
+</div>
+
+<div class="inven">
+    <div class="panel with-nav-tabs panel-danger">
+        <div class="panel-heading">
+            <ul class="nav nav-tabs">
+                <li data-ng-class="{active : tabActive == 0}"><a data-ng-href="" data-ng-click="tabEvent(0)">타일</a></li>
+                <li data-ng-class="{active : tabActive == 1}"><a data-ng-href="" data-ng-click="tabEvent(1)">가구</a></li>
+                <li data-ng-class="{active : tabActive == 2}"><a data-ng-href="" data-ng-click="tabEvent(2)">캐릭터</a></li>
+                <li data-ng-class="{active : tabActive == 3}"><a data-ng-href="" data-ng-click="tabEvent(3)">그리기</a></li>
+                <li class="button">
+                    <button type="button" class="btn btn-danger set">편집 OFF</button>
+                    <div class="interface">
+                        <button type="button" class="btn btn-dange zoom-out">전체보기</button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in" data-ng-class="{active : tabActive == 0}" id="tab1danger">
+                    <div class="myinven col-md-12 text-right">
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../item/2.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../item/2.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../item/2.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../item/2.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../item/2.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+                        <div class="myitem col-md-1 text-center">
+                            <p class="close-path"></p>
+                            <img src="../img/like.png" alt="">
+                            <p>선인장1</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade in" data-ng-class="{active : tabActive == 1}" id="tab2danger">
+                    <h4 data-ng-if="inven.data.length == 0">아이템이 없습니다.</h4>
+                    <img data-ng-repeat="rows in inven.data" data-ng-src="{{'resources/item/' + rows.itemno + '.png'}}" data-ng-if="rows.type == 2" data-ng-click="imgivent($index)">
+                </div>
+                <div class="tab-pane fade in" data-ng-class="{active : tabActive == 2}" id="tab3danger">Danger 3</div>
+                <div class="tab-pane fade in" data-ng-class="{active : tabActive == 3}" id="tab4danger">
+                    <div class="canvas cvs">
+                        <canvas id="myline" width="100" height="100" style="border:1px solid #000000;"></canvas>
+                        <canvas id="mydraw" width="100" height="100"></canvas>
+                    </div>
+                    <div class="draw-inter">
+                        <p>가로를 선택해주세요.
+                            <select id="width">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                    </select>
+                        </p>
+                        <p>높이를 선택해주세요.
+                            <select id="height">
+	                                    <option>1</option>
+	                                    <option>2</option>
+	                                    <option>3</option>
+	                                    <option>4</option>
+	                                    <option>5</option>
+	                                    <option>6</option>
+	                                    <option>7</option>
+	                                    <option>8</option>
+	                                </select>
+                        </p>
+                        <button class="btn clear">초기화</button>
+                        <button class="btn eraser">지우개</button>
+                        <button class="btn pen">그리기모드</button>
+                        <button class="btn save" data-toggle='modal' data-target='#myModal'>저장</button>
+                        <div id="color-box-with-change-value"></div>
+                    </div>
+                    <div id='myModal' class='modal fade text-center' role='dialog'>
+                        <div class='modal-dialog'>
+                            <div class='modal-content'>
+                                <div class='modal-header'>
+                                    <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                                    <h3>저장</h3>
+                                </div>
+                                <form name="itemForm">
+                                    <div class='modal-body'>
+                                        <select id="type">
+	                                                <option>타일</option>
+	                                                <option>가구</option>
+	                                            </select>
+                                        <input class='input-info' placeholder='이름을 지어주세요' type='text' data-ng-model="item.name">
+                                        <input class='input-info' placeholder='가격을 입력해주세요(선택)' type='password' data-ng-model="item.price">
+                                    </div>
+                                    <div class='modal-footer'>
+                                        <button type="button" class='btn btn-danger' data-dismiss='modal' style='background-color: #b1b1b1; border: none;' id='bbssave' data-ng-click="additem()">저장</button>
+                                        <button type='button' class='btn btn-danger' data-dismiss='modal' style='background-color: #b1b1b1; border: none;' id='bbsshop' data-ng-click="addshop()">상점</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

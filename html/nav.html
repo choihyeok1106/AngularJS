@@ -1,0 +1,42 @@
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand logo" href="#"></a>
+                <div class="login" data-ng-show="loginbool">
+	                <a class="navbar-brand" href="#">
+	                	{{user.name}}
+	                </a>
+	                <a class="navbar-brand" href="#">
+	                   	{{user.point}}포인트 
+	                </a>
+	                <a class="navbar-brand logout" href="#" data-ng-click="logout()">
+	                   	로그아웃
+	                </a>
+                </div>
+                <a id="custom-login-btn" data-ng-click="kakao()" data-ng-hide="loginbool">
+                	<img src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" width="300"/>
+                </a>
+            </div>
+        </div>
+    </nav>
+   <div class="container-fluid">
+       	    <nav class="navbar mymenu">
+	            <div class="navbar-header2">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myprofile">
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span> 
+	                  </button>
+	            </div>
+	            <div class="collapse navbar-collapse" id="myprofile">
+	                <ul class="nav navbar-nav" data-ng-show="loginbool">
+	                    <li data-ng-class="{active : navDis === '#!/'}"><a href="#!/">마이룸</a></li>
+	                    <li data-ng-class="{active : navDis === '#!/shop'}"><a href="#!/shop">상점</a></li>
+	                	<li data-ng-class="{active : navDis === '#!/friend'}"><a href="#!/friend">친구찾기</a></li>
+	                </ul>
+	                <ul class="nav navbar-nav" data-ng-hide="loginbool">
+	                    <li data-ng-class="{active : navDis === '#!/friend'}"><a href="#!/friend">구경가기</a></li>
+	                </ul>
+	            </div>
+	        </nav>
+	   </div>
